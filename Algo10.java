@@ -9,7 +9,8 @@ public class Algo10 {
     System.out.println ("Entrez un second chiffre"); 
     int b = scanner.nextInt();
 
-    int somme = a + b ;    
+    int somme = a + b ;
+        
     System.out.println("La somme de "+ a + " + " + b + " = " + somme);
 
     if (somme >=10) {

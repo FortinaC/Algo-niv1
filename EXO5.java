@@ -4,13 +4,10 @@ public class EXO5 {
     public static void main(String[] args) {
           
     Scanner scanner = new Scanner (System.in);
-    System.out.println("Entrez un chiffre");
-    int a = scanner.nextInt();
-
-    System.out.println("Entrez un chiffre");
+    System.out.println("Entrez trois chiffres"); /*Demande à l'utilisateur des chiffres*/
+    
+    int a = scanner.nextInt(); /*Déclaration des variables*/
     int b = scanner.nextInt();
-
-    System.out.println("Entrez un chiffre");
     int c = scanner.nextInt();
 
     int resultat = (a*b)/c;
@@ -22,5 +19,5 @@ public class EXO5 {
     else {
         System.out.println ("Le résultat est inférieur à 10");
     }
-}
+} /*Vérification si le résultat est supérieur ou inférieur à 10*/
 }
