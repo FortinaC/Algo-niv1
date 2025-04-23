@@ -12,7 +12,7 @@ public class Algo10 {
     int somme = a + b ;    
     System.out.println("La somme de "+ a + " + " + b + " = " + somme);
 
-    if (somme >10) {
+    if (somme >=10) {
     System.out.println ("Le résultat est supérieur à 10");
     }
     else {
