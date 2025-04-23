@@ -12,10 +12,13 @@ public class EXO3 {
 
     int resultat = a+b; 
     
-    System.out.println ("Le résultat est" + resultat);
+    System.out.println ("Le résultat est "+ resultat);
 
-    if (condition) {
-        
+    if (resultat %2 == 0) {
+    System.out.println ("Le résultat est pair");        
+    }
+    else {
+    System.out.println ("Le résultat est impair");    
     }
 
     scanner.close () ; 
