@@ -19,5 +19,7 @@ public class EXO5 {
     else {
         System.out.println ("Le résultat est inférieur à 10");
     }
+
+    scanner.close () ; 
 } /*Vérification si le résultat est supérieur ou inférieur à 10*/
 }

@@ -12,5 +12,6 @@ public class EXO6 {
     
     System.out.println ("Je m'appelle " + nom + " et j'ai " + age + " ans "); /*Affichage automatique de la petite phrase*/ 
 
+    scanner.close () ; 
 }
 }
