@@ -20,6 +20,8 @@ public class EXO2 {
         {
             System.out.println("Le résultat est supérieur à 0");
         }
-
+        scanner.close () ; 
     } 
+
+    
 }
