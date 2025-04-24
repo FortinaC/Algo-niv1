@@ -8,9 +8,9 @@ public class EXO10 {
     Scanner scanner = new Scanner(System.in);
     /*Question 1*/
     System.out.println("Question 1: PC veut dire Personnal Computer ? (VRAI/FAUX)");
-        String reponse1=scanner.nextLine();
-        if (reponse1.equals("VRAI"));
-        {score++;}
+    String reponse1=scanner.nextLine();
+    if (reponse1.equals("VRAI"));
+    {score++;}
     
     /*Question 2*/
     System.out.println("Question 2: Le premier virus a été créé dans les années 60 ? (VRAI/FAUX)");
