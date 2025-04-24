@@ -40,6 +40,6 @@ public class EXO8 {
     else {
     System.out.println ("Connexion échouée");
     }
-     /*Confirmation de l'adresse et du mot de passe*/
+     /*Confirmation de l'adresse et du mot de passe pour valider la connexion*/
 }
 }

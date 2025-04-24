@@ -17,7 +17,7 @@ public class EXO7 {
     else  {
         System.out.println ("Answer yes or no");
     }    
-    
+    /*Condition en fonction de si c'est yes or no ou une autre réponse*/
     scanner.close () ; 
 }
 }

@@ -36,16 +36,19 @@ public class EXO10 {
     if (reponse5.equals("FAUX"));
     {score++;}
 
-
+    /*Total du score*/
     System.out.println ("Votre score est de " +score);
    
+    scanner.close () ;
+
     if (score==5) {
         System.out.println ("Tu es le meilleur");
     }
     else {
         System.out.println ("Tu peux t'améliorer encore");
     }
- scanner.close () ;
+     /*Message personnalisé en fonction du score*/
+ 
 
 
 }
