@@ -10,8 +10,12 @@ public class EXO7 {
     if (response.equals("yes")) {
         System.out.println ("Nice to meet you");
     }
+    else if (response.equals ("no"))
+    {
+        System.out.println ("Learn English"); 
+    }
     else  {
-        System.out.println ("Learn English");
+        System.out.println ("Answer yes or no");
     }    
     
     scanner.close () ; 
