@@ -6,12 +6,12 @@ public class EXO11 {
     int retrait;
 
     Scanner scanner = new Scanner(System.in);
-     System.out.println("Combien voulez vous retirer ?");/*Demandez à utilisateur la somme à retirer*/
+     System.out.println("Combien voulez vous retirer ?"); /*Demandez à utilisateur la somme à retirer*/
      retrait = scanner.nextInt();
 
      scanner.close () ;
     
-    if (Retrait <=3000) {System.out.println ("Votre nouveau solde est de" + (Solde-Retrait));
+    if (retrait <=3000) {System.out.println ("Votre nouveau solde est de " + (solde-retrait));
     }
     else 
     {
