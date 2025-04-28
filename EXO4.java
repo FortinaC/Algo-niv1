@@ -13,7 +13,7 @@ public class EXO4 {
     }
     else {
     System.out.println ("a n'est pas divisible par 2");    
-    } /*Vérification si le chiffre est divisible par 2*/
+    } /*Vérification si le chiffre est divisible par 2 et affichage du résultat*/
 
     scanner.close () ; 
 } 

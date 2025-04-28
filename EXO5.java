@@ -6,11 +6,11 @@ public class EXO5 {
     Scanner scanner = new Scanner (System.in);
     System.out.println("Entrez trois chiffres"); /*Demande à l'utilisateur des chiffres*/
     
-    int a = scanner.nextInt(); /*Déclaration des variables*/
-    int b = scanner.nextInt();
-    int c = scanner.nextInt();
+    double a = scanner.nextDouble(); /*Déclaration des variables*/
+    double b = scanner.nextDouble();
+    double c = scanner.nextDouble();
 
-    int resultat = (a*b)/c;
+    double resultat = (a*b)/c; /*Calcul de l'équation*/
 
     if (resultat>10) {
      System.out.println ("le résultat est supérieur à 10"); 
@@ -21,5 +21,5 @@ public class EXO5 {
     }
 
     scanner.close () ; 
-} /*Vérification si le résultat est supérieur ou inférieur à 10*/
+} /*Vérification si le résultat est supérieur ou inférieur à 10 et affichage du résultat*/
 }
