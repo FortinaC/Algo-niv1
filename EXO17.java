@@ -37,8 +37,20 @@ import java.util.Scanner;
 
 public class EXO17 {
     public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
 
+    Scanner scanner = new Scanner(System.in);
+        
+    double SansPlomb95 = 1.69; 
+    double SansPlomb98 = 1.78; 
+    double Gazole = 1.58;
+        
+    System.out.println("Quel est le type de votre carburant ?");
+    System.out.println("0 : Gazole (B7)");
+    System.out.println("1 : Sans Plomb 95");
+    System.out.println("2 : Sans Plomb 98 (E5)");
+
+    int carburant = scanner.nextInt();
     
+   
 }
 }
