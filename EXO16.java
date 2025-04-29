@@ -70,10 +70,7 @@ public static void main(String[] args) {
         prixFinal = prixFinal - (prixFinal*0.40); /*Réduction si senior*/
     }
 
-    else {
-        prixFinal = prixFinal; /*Prix de base*/
-    }
-
+    
     if (place >= 60) {
         prixFinal= prixFinal - (prixFinal*0.20); /*Réduction si plus de 60 places restantes */
 
@@ -81,16 +78,14 @@ public static void main(String[] args) {
     else if (place <= 20) {
         prixFinal = prixFinal + (prixFinal*0.20); /*Augmentation si il reste 20 places */
     }
-    else {
-        prixFinal = prixFinal; /*Prix de base*/
-    }
+    
 
     if (classe.equals("OUI")) {
         prixFinal = prixFinal + (prixFinal*0.20); /*Augmentation si buisness classe */
     }
-    else {
-        prixFinal = prixFinal; /*Prix de base*/
-    } 
+    
     System.out.println("Le prix final est " +prixFinal); /* Affichage du prix final */
+
+    scanner.close () ;
 }
 }
