@@ -11,7 +11,7 @@ public class EXO11 {
 
      scanner.close () ;
     
-    if (retrait <=3000) {System.out.println ("Votre nouveau solde est de " + (solde-retrait));
+    if (retrait <=3000) {System.out.println ("Votre nouveau solde est de " + (solde-retrait) + " € ");
     }
     else 
     {

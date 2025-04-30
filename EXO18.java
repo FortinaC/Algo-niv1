@@ -1,3 +1,4 @@
+
 /* EXO18 : Avec PRINT & SCANNER : 
  * 
  * 
@@ -30,10 +31,50 @@
 
  * 
 */
-
+import java.util.Scanner;
 
 public class EXO18 {
     public static void main(String[] args) {
-    
-}
+        Scanner scanner = new Scanner(System.in);
+
+        double montantPret;
+        boolean enCDI;
+        double salaire = 0.0;
+        double apport;
+        double propriete = 0.0;
+        boolean condition1;
+        boolean condition2;
+        boolean condition3;
+
+        System.out.println ("Quel est votre montant de pret ?");
+        montantPret= scanner.nextDouble ();
+
+        System.out.println ("Etes-vous en CDI (TRUE/FALSE)");
+        enCDI = scanner.nextBoolean();
+
+        if (enCDI) {
+            System.out.println ("Quel est votre salaire ?");
+            salaire = scanner.nextDouble();
+        }
+
+        System.out.println ("Quel est votre apport ?");
+        apport = scanner.nextDouble();
+
+        if (!enCDI) {
+            System.out.println ("Quel est la valeur de votre propriété");
+            propriete = scanner.nextDouble();
+        }
+       condition1 = enCDI && salaire >= 3000;
+       condition2 = apport >= montantPret*0.25;
+       condition3 = !condition1 && propriete >= montantPret*0.75;
+
+       if (condition1 && condition2 || condition3) {
+        System.out.println ("Vous avez obtenu votre prêt");
+        }
+        else {
+        System.out.println ("Hélas, vous ne pouvez pas obtenir de prêt");
+        }
+
+        scanner.close();
+    }
 }
