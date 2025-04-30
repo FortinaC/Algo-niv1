@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 public class EXO7 {
     public static void main(String[] args) {
+        
     Scanner scanner = new Scanner(System.in);
     System.out.println ("Do you speak english ?"); /*Demande à l'utilisateur si il parle anglais*/
     
-    String response = scanner.nextLine();
+    String reponse = scanner.nextLine();
 
-    if (response.equals("yes")) {
+    if (reponse.equalsIgnoreCase ("yes")) {
         System.out.println ("Nice to meet you");
     }
-    else if (response.equals ("no"))
+    else if (reponse.equalsIgnoreCase ("no"))
     {
         System.out.println ("Learn English"); 
     }

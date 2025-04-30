@@ -68,7 +68,7 @@ public class EXO17 {
             scanner.close();
         }
 
-        System.out.println("Vous avez choisi : " + carburantNom);  /* Carburant choisi */
+        System.out.println("Vous avez choisi : " + carburantNom);  /* Choix du Carburant */
 
         System.out.println("Quelle est la distance à parcourir (en km) ?"); 
         double distance = scanner.nextDouble();

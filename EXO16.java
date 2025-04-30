@@ -43,50 +43,60 @@
 
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class EXO16 {
-public static void main(String[] args) {
 
-    double prix = 1500; /*Déclare les variables*/
-    int place = 18;
-    int age ;
-    String classe ;
-    double prixFinal ; 
-    
-    Scanner scanner = new Scanner(System.in);
-    
-    System.out.println ("Quel est votre age");/*Demande à l'utilisateur l'age */
-    age = scanner.nextInt(); /*Stocke la variable age */
+    public static void main(String[] args) {
+        // Déclaration des variables
+        double prix = 1500; // Prix initial
+        int place = 65;     // Nombre de places disponibles
+        int age;
+        String classe;
+        double tauxReductionPlace = 0.0;
+        double tauxAugmentationPlace = 0.0;
+        double tauxReductionAge = 0.0;
+        double tauxAugmentationClasse = 0.0;
+        double prixFinal;
 
-    classe = scanner.nextLine();
-    
-    System.out.println ("Souhaitez-vous être en classe buisness OUI/NON"); /*Demande à l'utilisateur si buisness classe*/
-    classe = scanner.nextLine (); /*Stocke la variable classe */
+        Scanner scanner = new Scanner(System.in);
 
-    prixFinal = prix; /*Stocke la variable age */
+        // Demander l'âge
+        System.out.println("Quel est votre âge ?");
+        age = scanner.nextInt();
+        scanner.nextLine(); 
 
-    if (age < 18) { prixFinal = prixFinal - (prixFinal * 0.20); /*Réduction si mineur */
-        
+        // Demander la classe
+        System.out.println("Souhaitez-vous être en classe business ? (OUI/NON)");
+        classe = scanner.nextLine();
+
+        // Appliquer les réductions selon l'âge
+        if (age < 18) {
+            tauxReductionAge += 0.20;
+        }
+
+        if (age > 60) {
+            tauxReductionAge += 0.40;
+        }
+
+        // Réductions ou augmentations selon les places restantes
+        if (place > 60) {
+            tauxReductionPlace += 0.20;
+        } else if (place < 20) {
+            tauxAugmentationPlace += 0.20;
+        }
+
+        // Augmentation si classe business
+        if (classe.equalsIgnoreCase("OUI")) {
+            tauxAugmentationClasse += 0.20;
+        }
+
+        // Calcul final
+        prixFinal = prix * (1 - tauxReductionAge) *(1 - tauxReductionPlace)* (1 + tauxAugmentationPlace)* (1 + tauxAugmentationClasse);
+
+        // Affichage du prix final
+        System.out.printf("Le prix final de la place est, " + prixFinal );
+
+        scanner.close();
     }
-    else if (age >= 60) {
-        prixFinal = prixFinal - (prixFinal*0.40); /*Réduction si senior*/
-    }
-
-    
-    if (place >= 60) {
-        prixFinal= prixFinal - (prixFinal*0.20); /*Réduction si plus de 60 places restantes */
-
-    }
-    else if (place <= 20) {
-        prixFinal = prixFinal + (prixFinal*0.20); /*Augmentation si il reste 20 places */
-    }
-    
-
-    if (classe.equals("OUI")) {
-        prixFinal = prixFinal + (prixFinal*0.20); /*Augmentation si buisness classe */
-    }
-    
-    System.out.println("Le prix final est " +prixFinal); /* Affichage du prix final */
-
-    scanner.close () ;
-}
 }
