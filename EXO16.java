@@ -50,6 +50,7 @@ public static void main(String[] args) {
     int place = 18;
     int age ;
     String classe ;
+    double prixFinal ; 
     
     Scanner scanner = new Scanner(System.in);
     
@@ -61,7 +62,7 @@ public static void main(String[] args) {
     System.out.println ("Souhaitez-vous être en classe buisness OUI/NON"); /*Demande à l'utilisateur si buisness classe*/
     classe = scanner.nextLine (); /*Stocke la variable classe */
 
-    double prixFinal = prix; /*Stocke la variable age */
+    prixFinal = prix; /*Stocke la variable age */
 
     if (age < 18) { prixFinal = prixFinal - (prixFinal * 0.20); /*Réduction si mineur */
         

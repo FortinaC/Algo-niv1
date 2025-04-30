@@ -44,28 +44,28 @@ public class EXO20 {
     double pourcentageInutile;
     double pourcentageEscreau;
 
-    System.out.println("Combien de personnes ont voté Mme Inutile");
+    System.out.println("Combien de personnes ont voté Mme Inutile");/*Nombre de vote Inutile*/
     votantInutile = scanner.nextInt();
 
-    System.out.println("Combien de personnes ont voté M Escreau");
+    System.out.println("Combien de personnes ont voté M Escreau");/*Nombre de vote Escreau */
     votantEscreau = scanner.nextInt();
 
-    totalVotes = votantInutile + votantEscreau ;
+    totalVotes = votantInutile + votantEscreau ;  /*Calcul du nombre total de vote */
 
     if (totalVotes > totalVotant ) {
-    System.out.println ("Il y a une erreur");
+    System.out.println ("Il y a une erreur"); /*Si total de vote supérieur au votant message d'erreur */
     }
     
     votesBlanc =totalVotant - totalVotes;
-    System.out.println("Vous avez " + votesBlanc + " d'abstentions, ils seront comptés nul");
+    System.out.println("Vous avez " + votesBlanc + " d'abstentions, ils seront comptés nul"); /*Précision sur le calcul de vote nul */
     
-    pourcentageInutile = (votantInutile * 100.0) / totalVotes;
+    pourcentageInutile = (votantInutile * 100.0) / totalVotes; /*Calcul du pourcentage de vote inutile*/
     pourcentageEscreau = (votantEscreau * 100.0) / totalVotes;
     
     System.out.println ("Mme Inutile a " + pourcentageInutile + " %");
     System.out.println ("M Escreau a " + pourcentageEscreau + " %");
     
-    if (pourcentageInutile > 60) {
+    if (pourcentageInutile > 60) {/*En fonction des résultats détermination du nouveau maire ou second tour*/
         System.out.println ("Mme Inutile est la nouvelle maire");
     }
     else if (pourcentageEscreau > 60) {

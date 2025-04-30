@@ -46,29 +46,29 @@ public class EXO18 {
         boolean condition2;
         boolean condition3;
 
-        System.out.println ("Quel est votre montant de pret ?");
+        System.out.println ("Quel est votre montant de pret ?");  /*Demande du montant du prêt*/ 
         montantPret= scanner.nextDouble ();
 
-        System.out.println ("Etes-vous en CDI (TRUE/FALSE)");
+        System.out.println ("Etes-vous en CDI (TRUE/FALSE)"); /*Demande si vous êtes en CDI*/
         enCDI = scanner.nextBoolean();
 
         if (enCDI) {
-            System.out.println ("Quel est votre salaire ?");
+            System.out.println ("Quel est votre salaire ?"); /*Si CDI quel est votre salaire*/
             salaire = scanner.nextDouble();
         }
 
-        System.out.println ("Quel est votre apport ?");
+        System.out.println ("Quel est votre apport ?"); /*Demande de la deuxieme condition l'apport*/
         apport = scanner.nextDouble();
 
-        if (!enCDI) {
+        if (!enCDI) { /*Si pas en CDI demande une valeur d'une propriété*/
             System.out.println ("Quel est la valeur de votre propriété");
             propriete = scanner.nextDouble();
         }
-       condition1 = enCDI && salaire >= 3000;
+       condition1 = enCDI && salaire >= 3000; /*Présentation des conditions*/
        condition2 = apport >= montantPret*0.25;
        condition3 = !condition1 && propriete >= montantPret*0.75;
 
-       if (condition1 && condition2 || condition3) {
+       if (condition1 && condition2 || condition3) { /*Vérification des conditions pour obtenir le prêt*/
         System.out.println ("Vous avez obtenu votre prêt");
         }
         else {

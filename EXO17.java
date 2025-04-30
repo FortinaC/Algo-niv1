@@ -68,9 +68,9 @@ public class EXO17 {
             scanner.close();
         }
 
-        System.out.println("Vous avez choisi : " + carburantNom);
+        System.out.println("Vous avez choisi : " + carburantNom);  /* Carburant choisi */
 
-        System.out.println("Quelle est la distance à parcourir (en km) ?");
+        System.out.println("Quelle est la distance à parcourir (en km) ?"); 
         double distance = scanner.nextDouble();
 
         double litresUtilises = (consommation / 100) * distance; /* calcul litres utilisés */

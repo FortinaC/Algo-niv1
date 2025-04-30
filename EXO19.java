@@ -24,11 +24,11 @@ public class EXO19 {
         System.out.println("Quel est le nombre de secondes ?");
         int totalsecondes = scanner.nextInt();
 
-        int heure = totalsecondes/ 3600;
-        int resteSeconde = totalsecondes % 3600;
+        int heure = totalsecondes/ 3600; /*Calcul du nombre d'heure*/
+        int resteSeconde = totalsecondes % 3600; /*Calcul du reste de seconde*/
 
-        int minute = resteSeconde / 60;
-        int seconde = resteSeconde % 60;
+        int minute = resteSeconde / 60; /*Récupération du reste de seconde et calcul des minutes*/
+        int seconde = resteSeconde % 60; /*Calcul du reste de seconde*/
 
         System.out.println(totalsecondes + " secondes correspondent à " + heure + " heures, " + minute + " minutes et " + seconde + " seconde(s)");
 
