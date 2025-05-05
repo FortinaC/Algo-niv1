@@ -35,7 +35,7 @@ import java.util.Scanner;
 
 public class EXO20 {
     public static void main(String[] args) { 
-    Scanner scanner = new Scanner(System.in);
+    
     int totalVotant= 150000;
     int votantInutile;
     int votantEscreau;
@@ -43,6 +43,8 @@ public class EXO20 {
     int votesBlanc;
     double pourcentageInutile;
     double pourcentageEscreau;
+
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Combien de personnes ont voté Mme Inutile");/*Nombre de vote Inutile*/
     votantInutile = scanner.nextInt();
