@@ -44,7 +44,9 @@ public class EXO17 {
         double consommation =0 ;
         double prixLitre=0 ;
         String carburantNom =" " ;
-        
+        double distance ;
+        double litresUtilises;
+        double cout;
 
         System.out.println ("Quel carburant choissisez-vous ? 0, gazole, 1, sans plomb 95 et 2 sans plomb 98");
         typeCarburant = scanner.nextInt();
@@ -65,16 +67,15 @@ public class EXO17 {
             prixLitre = 1.96;
         } else {
             System.out.println("Type de carburant non reconnu.");
-            scanner.close();
+            
         }
 
         System.out.println("Vous avez choisi : " + carburantNom);  /* Choix du Carburant */
 
         System.out.println("Quelle est la distance à parcourir (en km) ?"); 
-        double distance = scanner.nextDouble();
-
-        double litresUtilises = (consommation / 100) * distance; /* calcul litres utilisés */
-        double cout = litresUtilises * prixLitre; /* calcul du coût */
+        distance = scanner.nextDouble();
+        litresUtilises = (consommation / 100) * distance; /* calcul litres utilisés */
+        cout = litresUtilises * prixLitre; /* calcul du coût */
 
         DecimalFormat df = new DecimalFormat("0.00");
         System.out.println ("Pour " + distance + " vous allez dépenser en moyenne " + df.format(cout) + "€");

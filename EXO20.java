@@ -77,6 +77,6 @@ public class EXO20 {
         System.out.println ("Il y aura un deuxième tour");
     } 
 
-
+scanner.close();
 }
 }

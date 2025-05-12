@@ -48,9 +48,9 @@ import java.util.Scanner;
 public class EXO16 {
 
     public static void main(String[] args) {
-        // Déclaration des variables
-        double prix = 1500; // Prix initial
-        int place = 65;     // Nombre de places disponibles
+        /* Déclaration des variables*/
+        double prix = 1500; /* Prix initial*/
+        int place = 65;     /*Nombre de places disponibles*/
         int age;
         String classe;
         double tauxReductionPlace = 0.0;
@@ -61,16 +61,16 @@ public class EXO16 {
 
         Scanner scanner = new Scanner(System.in);
 
-        // Demander l'âge
+        /* Demander l'âge*/
         System.out.println("Quel est votre âge ?");
         age = scanner.nextInt();
         scanner.nextLine(); 
 
-        // Demander la classe
+        /* Demander la classe*/
         System.out.println("Souhaitez-vous être en classe business ? (OUI/NON)");
         classe = scanner.nextLine();
 
-        // Appliquer les réductions selon l'âge
+        /* Appliquer les réductions selon l'âge*/
         if (age < 18) {
             tauxReductionAge += 0.20;
         }
@@ -79,22 +79,22 @@ public class EXO16 {
             tauxReductionAge += 0.40;
         }
 
-        // Réductions ou augmentations selon les places restantes
+        /* Réductions ou augmentations selon les places restantes*/
         if (place > 60) {
             tauxReductionPlace += 0.20;
         } else if (place < 20) {
             tauxAugmentationPlace += 0.20;
         }
 
-        // Augmentation si classe business
+        /* Augmentation si classe business*/
         if (classe.equalsIgnoreCase("OUI")) {
             tauxAugmentationClasse += 0.20;
         }
 
-        // Calcul final
+        /* Calcul final*/
         prixFinal = prix * (1 - tauxReductionAge) *(1 - tauxReductionPlace)* (1 + tauxAugmentationPlace)* (1 + tauxAugmentationClasse);
 
-        // Affichage du prix final
+        /*  Affichage du prix final*/
         System.out.printf("Le prix final de la place est, " + prixFinal );
 
         scanner.close();

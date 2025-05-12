@@ -13,9 +13,11 @@ public class EXO12 {
         System.out.println("Votre réduction :");/*Demande la réduction à l'utilisateur*/
         pourcentage = scanner.nextInt(); /*Met à jour la variable*/
 
+        prix = Math.round(prix*100)/100;
+       
         result = prix - ((prix * pourcentage) / 100); /*Calcul le résultat */
 
-        System.out.println("Prix après réduction de " + pourcentage + "% : " + result); /*Affiche le résultat */
+        System.out.println("Prix après réduction de " + pourcentage + "% : " + result + "€"); /*Affiche le résultat */
 
         scanner.close();
     }
